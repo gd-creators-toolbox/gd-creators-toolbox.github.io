@@ -1,0 +1,54 @@
+---
+layout: default
+permalink: /tutorials/
+title: Tutorials
+---
+
+{% assign categories = "" | split:"|" %}
+{% for tutorial in site.tutorials %}
+    {% for category in tutorial.categories %}
+        {% assign categories = categories | push: category | uniq %}
+    {% endfor %}
+{% endfor %}
+
+<div class="container">
+    <h1 class="display-1">Tutorials</h1>
+    <br>
+
+    {% for cat in categories %}
+        {% if cat != "" %}
+            <h2 class="text-capitalize">{{ cat}}</h2>
+                    {% for tutorial in site.tutorials %}
+                        {% if tutorial.category == cat %}
+
+                        {% case tutorial.difficulty %}
+                            {% when "easy" %}
+                                {% assign difficultyColour = "bs-blue" %}
+                            {% when "normal" %}
+                                {% assign difficultyColour = "bs-green" %}
+                            {% when "hard" %}
+                                {% assign difficultyColour = "bs-yellow" %}
+                            {% when "harder" %}
+                                {% assign difficultyColour = "bs-red" %}
+                            {% when "insane" %}
+                                {% assign difficultyColour = "bs-purple" %}
+                            {% else %}
+                                {% assign difficultyColour = "bs-gray" %}
+                        {% endcase %}
+
+                            <div class="card" style="width: 18rem">
+                                <img class="card-img-top" src="/assets/tutorial_images/{{tutorial.image}}">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">{{tutorial.title}}</h5>
+                                    <span style="background-color: var(--{{difficultyColour}});" class="badge rounded-pill">{{tutorial.difficulty}}</span>
+                                    <p class="card-text">{{tutorial.description}}</p>
+                                    <a href="{{tutorial.url}}" class="btn btn-primary">View</a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+        {% endif %}
+    {% endfor %}
+</div>

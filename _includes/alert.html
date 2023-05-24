@@ -1,0 +1,6 @@
+<div class="alert alert-{{include.type}}" role="alert">
+    {% if include.icon %}
+        <i class="bi bi-{{include.icon}}"></i>
+    {% endif %}
+    {{include.content}}
+</div>
