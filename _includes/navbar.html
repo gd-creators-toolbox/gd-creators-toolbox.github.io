@@ -13,8 +13,33 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/tutorials/">Tutorials</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">About</a>
+                </li>
             </ul>
+            <button class="btn p-0 d-flex me-2" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <input maxlength="0" placeholder="🔎︎ Search" type="text" class="form-control">
+            </button>
+            <a href="https://github.com/gd-creators-toolbox/gd-creators-toolbox.github.io"><i class="bi bi-github btn"></i></a>
+              
+
         </div>
 
     </div>
 </nav>
+
+
+<div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div id="searchBar"></div>
+            <div id="hits"></div>
+        </div>
+        <div class="modal-footer">
+          <small>Search by <a href="algolia.com"><img style="height: 1em;" src="/assets/Algolia-logo-white.svg"></a></small>
+        </div>
+      </div>
+    </div>
+</div>
+  

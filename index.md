@@ -1,4 +1,5 @@
 ---
-permalink: /effects/
-layout: default
+layout: home
+title: Home
 ---
+

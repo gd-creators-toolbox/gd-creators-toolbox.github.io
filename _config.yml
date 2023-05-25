@@ -3,3 +3,8 @@ title: Geometry Dash Creator's Toolbox
 collections:
   tutorials:
     output: true
+
+algolia:
+  application_id: V5P2F5Q38P
+  index_name: gd-creators-toolbox
+  search_only_api_key: 111c8896dfa95dbce4739445b0cc6759
