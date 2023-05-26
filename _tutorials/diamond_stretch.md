@@ -4,7 +4,7 @@ title: Diamond Stretch
 description: A simple yet effective effect achieved with counter rotating lines.
 image: diamond_stretch.gif
 layout: tutorial
-difficulty: "easy"
+difficulty: easy
 author: jbritain
 ---
 
